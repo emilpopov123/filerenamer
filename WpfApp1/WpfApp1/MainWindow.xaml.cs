@@ -51,7 +51,7 @@ namespace WpfApp1
 
             // Set filter for file extension and default file extension 
             dlg.DefaultExt = ".png";
-            dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+            dlg.Filter = "PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|";
 
 
             // Display OpenFileDialog by calling ShowDialog method 
