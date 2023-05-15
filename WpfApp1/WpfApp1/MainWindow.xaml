@@ -9,8 +9,9 @@
 
     <Window.Resources>
         <Style x:Key="BtnStyle" TargetType="Button">
-            <Setter Property="Height" Value="46"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
             <Setter Property="Width" Value="272"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
         </Style>
     </Window.Resources>
 
@@ -27,7 +28,10 @@
         </Grid.RowDefinitions>
 
         <HeaderedContentControl FontSize="50" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">File renamer</HeaderedContentControl>
-        <Button Style="{StaticResource BtnStyle}" x:Name="mainBtn" Click="MainBtn_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Dateien umbenennen</Button>
+
+        <TextBox x:Name="directoryText" Grid.Row="1" Grid.Column="1" Height="25" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True"></TextBox>
+        <Button Height="25" Width="100" FontSize="11" x:Name="directoryBtn" Click="DirectoryBtn_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top">Datei auswählen</Button>
+        <Button Style="{StaticResource BtnStyle}" x:Name="mainBtn" Click="MainBtn_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,72,0,0">Dateien umbenennen</Button>
     </Grid>
 
 </Window>
