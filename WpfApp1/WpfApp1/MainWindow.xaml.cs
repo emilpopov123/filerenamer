@@ -32,16 +32,21 @@ namespace WpfApp1
 
         private void MainBtn_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var file in dInfo.GetFiles("*.jpg"))
+            if (directoryText.Text != "" && searchVal.Text != "" && replaceVal.Text != "")
             {
-                //Console.WriteLine(file);
-                if (file.Name.Contains("Capture"))
+                foreach (var file in dInfo.GetFiles("*.jpg"))
                 {
-                    File.Move(file.FullName, directory + "\\" + file.Name.Replace("Capture", "img"));
+                    //Console.WriteLine(file);
+                    if (file.Name.Contains(searchVal.Text))
+                    {
+                        File.Move(file.FullName, directory + "\\" + file.Name.Replace(searchVal.Text, replaceVal.Text));
+                    }
                 }
+                MessageBox.Show("Dateien umbenannt");
             }
-            MessageBox.Show("Dateien umbenannt");
-            MessageBox.Show(directoryText.Text);
+            else {
+                MessageBox.Show("Textfelder nicht gefüllt");
+            }
         }
 
         private void DirectoryBtn_Click(object sender, RoutedEventArgs e) {
