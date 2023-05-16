@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Ookii.Dialogs.Wpf;
+
 
 
 namespace WpfApp1
@@ -23,8 +25,6 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string directory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-        public static DirectoryInfo dInfo = new DirectoryInfo(directory);
         public MainWindow()
         {
             InitializeComponent();
@@ -32,9 +32,12 @@ namespace WpfApp1
 
         private void MainBtn_Click(object sender, RoutedEventArgs e)
         {
+
             if (directoryText.Text != "" && searchVal.Text != "" && replaceVal.Text != "")
             {
-                foreach (var file in dInfo.GetFiles("*.jpg"))
+                DirectoryInfo directory = new DirectoryInfo(directoryText.Text);
+                MessageBox.Show(directory.ToString());
+                foreach (var file in directory.GetFiles("*.jpg"))
                 {
                     //Console.WriteLine(file);
                     if (file.Name.Contains(searchVal.Text))
@@ -51,24 +54,11 @@ namespace WpfApp1
 
         private void DirectoryBtn_Click(object sender, RoutedEventArgs e) {
 
-            OpenFileDialog dlg = new OpenFileDialog();
+            VistaFolderBrowserDialog dlg = new VistaFolderBrowserDialog();
 
-
-            // Set filter for file extension and default file extension 
-            dlg.DefaultExt = ".png";
-            dlg.Filter = "PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|";
-
-
-            // Display OpenFileDialog by calling ShowDialog method 
-            Nullable<bool> result = dlg.ShowDialog();
-
-
-            // Get the selected file name and display in a TextBox 
-            if (result == true)
+            if (dlg.ShowDialog() ?? false)
             {
-                // Open document 
-                string filename = dlg.FileName;
-                directoryText.Text = filename;
+                directoryText.Text = dlg.SelectedPath;
             }
         }
     }

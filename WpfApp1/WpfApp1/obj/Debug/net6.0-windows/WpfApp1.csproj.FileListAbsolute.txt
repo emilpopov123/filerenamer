@@ -40,3 +40,5 @@ C:\Users\Emil Popov\Source\Repos\filerenamer\WpfApp1\WpfApp1\obj\Debug\net6.0-wi
 C:\Users\Emil Popov\Source\Repos\filerenamer\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.pdb
 C:\Users\Emil Popov\Source\Repos\filerenamer\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Users\Emil Popov\Source\Repos\filerenamer\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\ref\WpfApp1.dll
+C:\Users\Emil Popov\Source\Repos\filerenamer\WpfApp1\WpfApp1\bin\Debug\net6.0-windows\Ookii.Dialogs.Wpf.dll
+C:\Users\Emil Popov\Source\Repos\filerenamer\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.csproj.CopyComplete
