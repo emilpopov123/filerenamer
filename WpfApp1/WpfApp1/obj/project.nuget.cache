@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k+ym332qUgEJPxkCt1UHgZ64O6zIArAKPw+ca1P0R5OKQQ5LykmLjDy2637INd1cfzLxEP6SzEQHu0uuXPxg7g==",
+  "dgSpecHash": "v6oSwTp1u9ED1RtMDhK3BSYZrY3O9l+STXLeoliYTMS0cDgcnCYREPv0KrhZamExjggR4MI6XwZql65V70WEEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emil Popov\\Source\\Repos\\filerenamer\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Emil Popov\\.nuget\\packages\\ookii.dialogs.wpf\\5.0.1\\ookii.dialogs.wpf.5.0.1.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\emil.popov\\Source\\Repos\\filerenamer\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
